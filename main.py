@@ -42,8 +42,8 @@ def main():
     tg_chat_id = os.environ['TG_CHAT_ID']
     tg_token = os.environ['TELEGRAM_TOKEN']
     try:
-        all_numbers = get_num_comics()
-        random_number = random.randint(1, all_numbers)
+        total_num_of_comics = get_num_comics()
+        random_number = random.randint(1,total_num_of_comics)
         alt, image, name = get_parametr_comics(random_number)
         filename = f"{name}.png"
         download_comics(image, filename)
