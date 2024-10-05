@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 
-def get_num_comics():
+def get_comic_num():
     url = "https://xkcd.com/info.0.json"
     response = requests.get(url)
     response.raise_for_status()
@@ -13,7 +13,7 @@ def get_num_comics():
     return all_number_comics
 
 
-def get_parametr_comic(number):
+def get_comic_parametr(number):
     url = f"https://xkcd.com/{number}/info.0.json"
     response = requests.get(url)
     response.raise_for_status()
